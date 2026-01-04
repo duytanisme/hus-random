@@ -352,7 +352,7 @@ def main():
     # 1. Mạng cơ bản (không có path)
     plt.figure()
     network.visualize_network(None, "Social Network - Structure")
-    plt.savefig("01_network_structure.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/01_network_structure.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [1] Đã lưu: 01_network_structure.png")
 
@@ -360,7 +360,7 @@ def main():
     path_rw, _, _ = network.random_walk(start_node, steps=30)
     plt.figure()
     network.visualize_network(path_rw, "Random Walk - Sample Path")
-    plt.savefig("02_random_walk_path.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/02_random_walk_path.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [2] Đã lưu: 02_random_walk_path.png")
 
@@ -368,7 +368,7 @@ def main():
     path_cbrw, _, _ = network.content_biased_random_walk(start_node, steps=30)
     plt.figure()
     network.visualize_network(path_cbrw, "Content-biased Random Walk - Sample Path")
-    plt.savefig("03_content_biased_path.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/03_content_biased_path.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [3] Đã lưu: 03_content_biased_path.png")
 
@@ -403,7 +403,7 @@ def main():
     plt.legend(fontsize=12, loc="lower right")
     plt.grid(True, alpha=0.3, linestyle="--")
     plt.tight_layout()
-    plt.savefig("04_coverage_comparison.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/04_coverage_comparison.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [4] Đã lưu: 04_coverage_comparison.png")
 
@@ -453,7 +453,7 @@ def main():
         label=f"TB CBRW: {np.mean(cbrw_speed):.3f}",
     )
     plt.tight_layout()
-    plt.savefig("05_speed_comparison.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/05_speed_comparison.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [5] Đã lưu: 05_speed_comparison.png")
 
@@ -490,19 +490,19 @@ def main():
         )
 
     plt.tight_layout()
-    plt.savefig("06_final_coverage_bars.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/06_final_coverage_bars.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [6] Đã lưu: 06_final_coverage_bars.png")
 
     # 7. So sánh 2 phương pháp (2 panels)
     network.visualize_comparison(rw_avg, cbrw_avg)
-    plt.savefig("07_comparison_dual_panel.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/07_comparison_dual_panel.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [7] Đã lưu: 07_comparison_dual_panel.png")
 
     # 8. Biểu đồ tổng hợp đầy đủ
     network.visualize_final_comparison(rw_avg, cbrw_avg)
-    plt.savefig("08_full_comparison_dashboard.png", dpi=300, bbox_inches="tight")
+    plt.savefig("data/08_full_comparison_dashboard.png", dpi=300, bbox_inches="tight")
     plt.close()
     print("    ✓ [8] Đã lưu: 08_full_comparison_dashboard.png")
 
